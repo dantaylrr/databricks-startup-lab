@@ -113,7 +113,7 @@ AS
       FROM churn_orders_silver GROUP BY user_id),  
     churn_app_events_stats as (
       SELECT first(platform) as platform, user_id, count(*) as event_count, count(distinct session_id) as session_count, max(to_timestamp(date, "MM-dd-yyyy HH:mm:ss")) as last_event
-        FROM live.churn_app_events_silver_dlt GROUP BY user_id)
+        FROM churn_app_events_silver GROUP BY user_id)
 
   SELECT *, 
          datediff(now(), creation_date) as days_since_creation,
