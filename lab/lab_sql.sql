@@ -71,7 +71,11 @@
 -- MAGIC
 -- MAGIC # Step 1 - Exploration of Raw.
 -- MAGIC
+-- MAGIC _All raw files should exist in a volume that was created under your workshop catalog & schema._
+-- MAGIC
 -- MAGIC **1.1).** Start by exploring raw, load **all** of our data from **all** of our sources into our notebook using SQL.
+-- MAGIC
+-- MAGIC _For exploratory analysis, load these tables into memory rather than saving anything to UC._
 -- MAGIC
 -- MAGIC **1.2).** Explore the statistical profiles of all of our datasets, use Databricks' built-in statistical profiler for this step.
 -- MAGIC
@@ -136,7 +140,7 @@
 
 -- COMMAND ----------
 
--- MAGIC %md
+-- MAGIC %md-sandbox
 -- MAGIC
 -- MAGIC _We can quite easily stand our tables up as-is for our Bronze layer, but as we've seen from the previous exercise, there's definitely some dodgy data landing in our hyperscalar storage location._
 -- MAGIC
@@ -148,6 +152,8 @@
 -- MAGIC * For now, our downstream analytics & stakeholders only require a daily refresh of data, they **do not need real-time data processing right now**.
 -- MAGIC
 -- MAGIC **2.2).** Again, stand-up our raw data (**run it as a one-off batch operation for the time-being**, we'll explore freshness in a little more depth once we get to orchestrating our pipeline) as bronze tables under the same catalog & schema, this time though, make sure that **all of the above requirements are met**.
+-- MAGIC
+-- MAGIC _HINT: Can we use a built-in [Databricks feature](https://docs.databricks.com/en/ingestion/cloud-object-storage/auto-loader/options.html) to achieve this?_
 -- MAGIC
 -- MAGIC _This works nicely, we've set-up a solid foundation for our downstream processes._
 
