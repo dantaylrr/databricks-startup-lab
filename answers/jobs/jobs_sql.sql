@@ -1,7 +1,7 @@
 -- Databricks notebook source
 -- DBTITLE 1,Make sure to use our catalog and schema
-USE CATALOG dtdemos;
-USE SCHEMA retail_c360;
+USE CATALOG <your_catalog>;
+USE SCHEMA <your_schema>;
 
 -- COMMAND ----------
 
