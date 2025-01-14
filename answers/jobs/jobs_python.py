@@ -68,7 +68,7 @@ for table in tables:
   .filter(F.col('_rescued_data').isNull())
   .drop(F.col("_rescued_data"))
   .writeStream
-  .option("checkpointLocation", f"{catalog}/{schema}/spark_checkpoints/spark_churn_app_events_silver")
+  .option("checkpointLocation", f"{volume_folder}/spark_checkpoints/spark_churn_app_events_silver")
   .option("mergeSchema", "true")
   .trigger(availableNow = True)
   .table(f"{catalog}.{schema}.spark_churn_app_events_silver").awaitTermination()
@@ -88,7 +88,7 @@ for table in tables:
           F.col("item_count").cast("int").alias("item_count"),
           F.to_timestamp(F.col("transaction_date"), "MM-dd-yyyy HH:mm:ss").alias("creation_date"))
   .writeStream
-  .option("checkpointLocation", f"{catalog}/{schema}/spark_checkpoints/spark_churn_orders_silver")
+  .option("checkpointLocation", f"{volume_folder}/spark_checkpoints/spark_churn_orders_silver")
   .option("mergeSchema", "true")
   .trigger(availableNow = True)
   .table(f"{catalog}.{schema}.spark_churn_orders_silver").awaitTermination()
