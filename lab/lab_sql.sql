@@ -1,7 +1,7 @@
 -- Databricks notebook source
 -- MAGIC %md-sandbox
 -- MAGIC
--- MAGIC # Databricks Start-up Lab (January 2025).
+-- MAGIC # Databricks ETL Lab (January 2025).
 -- MAGIC
 -- MAGIC In this short lab, we're going to be ingesting data from pre-loaded Unity Catalog volumes, performing some basic data cleansing & aggregations on the data across our medallion architecture & finally, standing up a feature table so that our Data Scientists can train a machine learning model for future inference.
 -- MAGIC
