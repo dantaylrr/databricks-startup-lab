@@ -21,6 +21,7 @@ SELECT sum(amount)/10 as MRR FROM churn_orders_silver o WHERE month(to_timestamp
 
 SELECT sum(amount), date_format(to_timestamp(churn_users_silver.creation_date, "MM-dd-yyyy H:mm:ss"), "yyyy-MM") m FROM churn_orders_silver o 
 		INNER JOIN churn_users_silver using (user_id)
+		where churn_users_silver.creation_date > '2021-01-01 00:00:00'
 			group by m
 
 -- COMMAND ----------
