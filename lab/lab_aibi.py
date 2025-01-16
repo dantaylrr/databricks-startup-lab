@@ -91,7 +91,7 @@
 # MAGIC **Step 3.2** When creating any genie space we have to set it up with the datasets that we need to ask the data of. As a best practice we need to ensure that all datasets are well documented. To do so, we'll head over to the Catalog explorer, select the datasets and ensure the table and columns have comment descriptions, see here for [steps](https://docs.databricks.com/en/comments/ai-comments.html#add-ai-generated-comments). Once we have this, we can now start asking questions of our Genie space.
 # MAGIC
 # MAGIC **Step 3.3** Start by generating responses to the following queries:
-# MAGIC - How many customers have churned over time? (compare that to the answer of the SQL query in the previous step)
+# MAGIC - How many total customers have churned? (compare that to the answer of the SQL query in the previous step)
 # MAGIC - What is the average monthly payment by platform?(visualize this)
 # MAGIC - What is the total Revenue in 2023?
 # MAGIC - What is the churn rate for each country represented in the user base? (visualize this)
