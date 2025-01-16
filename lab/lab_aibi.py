@@ -69,7 +69,7 @@
 # MAGIC
 # MAGIC **Step 2.2** Publish the dashboard and make it viewable by others in the organization. 
 # MAGIC
-# MAGIC **Step 2.3** Ensure that this Dashboard refreshes on a bi-weekly basis. 
+# MAGIC **Step 2.3** Ensure that this Dashboard refreshes on a weekly basis. 
 # MAGIC
 # MAGIC
 # MAGIC
