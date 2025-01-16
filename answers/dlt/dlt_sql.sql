@@ -84,12 +84,12 @@ TBLPROPERTIES (pipelines.autoOptimize.zOrderCols = "user_id")
 COMMENT "User data cleaned and anonymized for analysis."
 AS SELECT
   id as user_id,
-  ai_mask(email, array("email")) as email, -- Alternatively, sha01(email)
+  ai_mask(email, array("email")) as email, -- Alternatively, sha1(email)
   to_timestamp(creation_date, "MM-dd-yyyy HH:mm:ss") as creation_date, 
   to_timestamp(last_activity_date, "MM-dd-yyyy HH:mm:ss") as last_activity_date, 
   ai_mask(firstname, array("name")) as firstname, -- Alternatively, "*****" as firstname
   ai_mask(lastname, array("name")) as lastname, -- Alternatively, "*****" as lastname
-  ai_mask(address, array("address")) as address, --Alternatively, sha01(address)
+  ai_mask(address, array("address")) as address, --Alternatively, sha1(address)
   canal, 
   country,
   gender,
