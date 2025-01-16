@@ -40,7 +40,7 @@
 # MAGIC - Total churned customers by Gender
 # MAGIC - Average Monthly recurring revenue
 # MAGIC - Total amount of customers who have churned 
-# MAGIC - Stretch: Monthly recurring revenue over time
+# MAGIC - Stretch: Monthly recurring revenue over time (filtering out any dates before 2021)
 # MAGIC
 # MAGIC Databricks SQL queries use a special type of compute called [SQL compute](https://docs.databricks.com/en/compute/sql-warehouse/index.html) which is optimized for running highly concurrent BI queries. Feel free to check out [this doc](https://docs.databricks.com/en/compute/sql-warehouse/index.html#create-a-sql-warehouse) for steps to create one if you don't already have one. 
 # MAGIC
